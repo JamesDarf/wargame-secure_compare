@@ -1,1 +1,3 @@
-# -wargame-find-the-d0g-s-name
+# wargame
+find-the-d0g-s-name
+
