@@ -21,16 +21,17 @@
             const inputValue = document.getElementById('inputText').value;
 
             // 서버로 fetch POST 요청 보내기
-            fetch('http://localhost:3000/login', {
+            fetch('/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    input: inputValue // 입력한 값 전송
+                    username: "dog",
+                    password: inputValue // 입력한 값 전송
                 })
             })
-            .then(response => response.json())
+            .then(response => response.text())
             .then(data => {
                 // 서버 응답 처리
                 console.log('Success:', data);

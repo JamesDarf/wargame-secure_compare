@@ -7,7 +7,7 @@ services:
     networks:
       - internal
     ports:
-      - "3000:3000"
+      - "13680:3000"
 
 networks:
   internal:

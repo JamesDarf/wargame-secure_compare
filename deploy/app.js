@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/login', jsonParser, (req, res) => {
+app.post('/login', jsonParser, (req, res) => {
     console.log(req.body)
     const { username , password } = req.body
 
-    if (compare('password', password) == true) {
+    if (compare('password', password) == true) { // password 값이 password임.
         // res.send(fs.readFileSync('flag.txt'))
-        res.send('FLAG{1234_1234}')
+        res.send('FLAG')
     } else {
         res.send('Wrong!')
     }
