@@ -14,5 +14,5 @@ COPY --chown=$USER:$USER ./ /home/$USER/deploy/
 
 # RUN chmod +rwx /home/$USER/deploy/entrypoint.sh
 
-# ENTRYPOINT ["./deploy/entrypoint.sh"]
-CMD ["node", "./deploy/app.js"]
+WORKDIR /home/$USER/deploy
+CMD ["node", "./app.js"]

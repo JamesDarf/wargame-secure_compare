@@ -84,6 +84,7 @@
             <img src="/static/images/dog.png" alt="dog-pic">
         </div>
         <p>If u find the dog's name, I'll give you the flag!!!</p>
+
         <input type="text" id="inputText" placeholder="Enter text">
         <button type="submit" onclick="sendRequest()">Submit</button>
     </div>
@@ -97,7 +98,8 @@
             fetch('/login', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'X-Server-Password': 'bb791309f692fea37de49b3f191ddcf55c112472'
                 },
                 body: JSON.stringify({
                     username: "dog",
